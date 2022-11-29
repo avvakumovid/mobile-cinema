@@ -1,10 +1,4 @@
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-} from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import React from 'react';
 import { useTypedNavigation } from '@/hooks/useTypedNavigation';
 
@@ -28,5 +22,3 @@ const Home = () => {
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});
