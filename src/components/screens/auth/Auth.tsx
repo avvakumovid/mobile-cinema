@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { IAuthFormData } from '@/shared/types/auth.interface';
 import { Button, Field, Loader } from '@/components/ui';
 import AuthFields from './AuthFields';
-import DismissKeyboard from '@/components/ui/form-elements/field/DismissKeyboard';
+import { DismissKeyboard } from '@/components/ui';
 
 const Auth = () => {
   const [isReg, setIsReg] = useState(false);

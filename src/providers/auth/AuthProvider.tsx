@@ -8,13 +8,14 @@ import React, {
 } from 'react';
 import { IContext, TypedUserState } from './auth-provider.interface';
 import * as SplashScreen from 'expo-splash-screen';
+import { IUser } from './../../shared/types/user.interface';
 
 export const AuthContext = createContext({} as IContext);
 
 let ignore = SplashScreen.preventAutoHideAsync();
 
 const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
-  const [user, setUser] = useState<TypedUserState>(null);
+  const [user, setUser] = useState<TypedUserState>({ isAdmin: true } as IUser);
 
   useEffect(() => {
     let mounted = true;
