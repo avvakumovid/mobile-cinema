@@ -30,6 +30,7 @@ const AuthFields: FC<IAuthFields> = ({ control, isPassRequired }) => {
         placeholder='Enter password'
         control={control}
         name='password'
+        secureTextEntry={true}
         rules={
           isPassRequired
             ? {
@@ -41,7 +42,6 @@ const AuthFields: FC<IAuthFields> = ({ control, isPassRequired }) => {
               }
             : {}
         }
-        keyboardType='email-address'
       />
     </>
   );

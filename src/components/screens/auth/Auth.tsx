@@ -5,6 +5,8 @@ import { IAuthFormData } from '@/shared/types/auth.interface';
 import { Button, Field, Loader } from '@/components/ui';
 import AuthFields from './AuthFields';
 import { DismissKeyboard } from '@/components/ui';
+import { useAuthMutations } from './useAuthMutations';
+import axios from 'axios';
 
 const Auth = () => {
   const [isReg, setIsReg] = useState(false);
@@ -13,11 +15,15 @@ const Auth = () => {
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<IAuthFormData> = ({ email, password }) => {
-    console.log(email, password);
+  const onSubmit: SubmitHandler<IAuthFormData> = async data => {
+    if (isReg) {
+      registerSync(data);
+    } else {
+      loginSync(data);
+    }
   };
 
-  const isLoading = false;
+  const { isLoading, loginSync, registerSync } = useAuthMutations(reset);
 
   return (
     <DismissKeyboard>
@@ -35,7 +41,7 @@ const Auth = () => {
               <Button onPress={handleSubmit(onSubmit)} icon='film'>
                 Go to watch
               </Button>
-              <Pressable onPress={() => setIsReg(!isReg)}>
+              <Pressable onPress={async () => setIsReg(!isReg)}>
                 <Text className='text-white opacity-30 text-right text-base mt-3'>
                   {isReg ? 'Login' : 'Register'}
                 </Text>

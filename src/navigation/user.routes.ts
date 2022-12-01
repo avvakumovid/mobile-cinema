@@ -13,11 +13,6 @@ export const userRoutes: IRoute[] = [
         component: Home,
     },
     {
-        name: "Auth",
-        component: Auth
-    },
-
-    {
         name: 'Trending',
         component: Trending
     },
