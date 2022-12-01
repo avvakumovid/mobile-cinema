@@ -18,6 +18,7 @@ const PrivateNavigator = () => {
           backgroundColor: '#090909',
         },
         headerShown: false,
+        animation: 'fade',
       }}
     >
       {user ? (
