@@ -1,23 +1,17 @@
-import { Pressable, Text, View } from 'react-native';
 import React from 'react';
 import { useTypedNavigation } from '@/hooks/useTypedNavigation';
+import { Heading, Layout, Loader } from '@/components/ui';
+import { useGetAllMovies } from './useGetAllMovies';
+import Carousel from './carousel/Carousel';
 
 const Home = () => {
-  const { navigate } = useTypedNavigation();
+  const { isLoading, movies } = useGetAllMovies();
 
   return (
-    <View className='mt-10'>
-      <Text>Home</Text>
-      <Pressable onPress={() => navigate('Auth')}>
-        <Text
-          style={{
-            color: 'white',
-          }}
-        >
-          Go To Login
-        </Text>
-      </Pressable>
-    </View>
+    <Layout>
+      <Heading title='Home' />
+      {isLoading ? <Loader /> : movies?.length && <Carousel movies={movies} />}
+    </Layout>
   );
 };
 

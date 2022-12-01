@@ -7,3 +7,6 @@ export const getUserUrl = (string: string) => `/user/${string}`
 export const getMovieUrl = (string: string) => `/movie/${string}`
 export const getGenreUrl = (string: string) => `/genre/${string}`
 export const getActorUrl = (string: string) => `/actor/${string}`
+
+
+

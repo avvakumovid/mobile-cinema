@@ -2,7 +2,7 @@ import { IAuthFormData } from '@/shared/types/auth.interface';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { SubmitHandler, UseFormSetValue } from 'react-hook-form';
 import Toast from 'react-native-toast-message';
-import { UserService } from './../../../services/user/user.service';
+import { UserService } from '../../../services/user.service';
 
 export const useProfile = (setValue: UseFormSetValue<IAuthFormData>) => {
     const { isLoading } = useQuery(['profile'], () => UserService.getProfile(),

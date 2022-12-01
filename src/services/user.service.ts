@@ -1,7 +1,7 @@
 import { getUserUrl } from '@/config/api.config';
-import { request } from '../api/request.api'
-import { IUser } from './../../shared/types/user.interface';
-import { IAuthFormData } from './../../shared/types/auth.interface';
+import { request } from './api/request.api'
+import { IUser } from '../shared/types/user.interface';
+import { IAuthFormData } from '../shared/types/auth.interface';
 
 export const UserService = {
     async getAll(searchTerm?: string) {
