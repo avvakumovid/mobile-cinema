@@ -8,7 +8,6 @@ import { IMovie } from '@/shared/types/movie.interface';
 import cn from 'clsx';
 import { FavoriteButton, Rating } from '@/components/ui';
 import { getMediaSource } from './../../../../utils/getMediaSource';
-import { BlurView } from 'expo-blur';
 
 const ReanimatedPressable = Animated.createAnimatedComponent(Pressable);
 

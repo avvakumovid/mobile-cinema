@@ -6,6 +6,7 @@ import Trending from '@/components/screens/trending/Trending';
 import Search from '@/components/screens/search/Search';
 import Favorites from '@/components/screens/favorites/Favorites';
 import Profile from '@/components/screens/profile/Profile';
+import Genre from './../components/screens/genre/Genre';
 
 export const userRoutes: IRoute[] = [
     {
@@ -27,6 +28,10 @@ export const userRoutes: IRoute[] = [
     {
         name: 'Profile',
         component: Profile
+    },
+    {
+        name: 'Genre',
+        component: Genre
     }
 
 

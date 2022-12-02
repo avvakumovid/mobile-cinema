@@ -4,6 +4,9 @@ export interface IParameters {
     country: string
 }
 
+export interface IGenreEditInput extends Omit<IGenre, '_id'> {
+}
+
 export interface IGenre {
     _id: string
     name: string

@@ -19,7 +19,7 @@ const MovieCatalog: FC<IMovieCatalog> = ({
       <View className='flex-row items-center, justify-between'>
         <Heading title={title} className='mb-3' />
         {isBackButton && (
-          <Pressable>
+          <Pressable onPress={goBack}>
             <Ionicons
               name='arrow-back-circle-outline'
               size={32}
