@@ -19,7 +19,7 @@ const BlurButton: FC<PropsWithChildren<IBlurButton>> = ({
         intensity={22}
         tint='light'
         className={cn(
-          'w-12 h-12 items-center justify-center rounded-2xl overflow-hidden',
+          'w-12 h-12 items-center justify-center rounded-2xl overflow-hidden ',
           className
         )}
       >
