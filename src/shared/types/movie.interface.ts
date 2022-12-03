@@ -19,7 +19,7 @@ export interface IActor {
     photo: string
     name: string
     countMovies: number
-    slug: number
+    slug: string
 }
 
 export interface IMovie {

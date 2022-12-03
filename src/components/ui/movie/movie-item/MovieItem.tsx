@@ -5,7 +5,7 @@ import { useTypedRoute } from '@/hooks/useTypedRoute';
 import Animated from 'react-native-reanimated';
 import { useMovieItemAnimation } from './useMovieItemAnimation';
 import { IMovie } from '@/shared/types/movie.interface';
-import cn from 'clsx';
+import cn, { clsx } from 'clsx';
 import { FavoriteButton, Rating } from '@/components/ui';
 import { getMediaSource } from './../../../../utils/getMediaSource';
 
@@ -27,7 +27,7 @@ const MovieItem: FC<IMovieItem> = ({ index, className, movie }) => {
     <ReanimatedPressable
       style={styleAnimation}
       onPress={() => navigate('Movie', { slug: movie.slug })}
-      className={cn('rounded-xl overflow-hidden h-56 w-40', className)}
+      className={cn('rounded-xl overflow-hidden h-56 w-40 mr-4', className)}
     >
       {isFavoritePage && (
         <View className='absolute z-1 right-1.5 top-1.5'>
