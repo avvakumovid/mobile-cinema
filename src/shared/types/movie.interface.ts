@@ -7,6 +7,9 @@ export interface IParameters {
 export interface IGenreEditInput extends Omit<IGenre, '_id'> {
 }
 
+export interface IActorEditInput extends Omit<IActor, '_id'> {
+}
+
 export interface IGenre {
     _id: string
     name: string
