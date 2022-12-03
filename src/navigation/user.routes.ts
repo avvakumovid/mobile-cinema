@@ -7,6 +7,8 @@ import Search from '@/components/screens/search/Search';
 import Favorites from '@/components/screens/favorites/Favorites';
 import Profile from '@/components/screens/profile/Profile';
 import Genre from './../components/screens/genre/Genre';
+import Actor from '@/components/screens/actor/Actor';
+import Movie from '@/components/screens/movie/Movie';
 
 export const userRoutes: IRoute[] = [
     {
@@ -32,6 +34,14 @@ export const userRoutes: IRoute[] = [
     {
         name: 'Genre',
         component: Genre
+    },
+    {
+        name: 'Actor',
+        component: Actor
+    },
+    {
+        name: 'Movie',
+        component: Movie
     }
 
 
