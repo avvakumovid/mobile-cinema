@@ -2,6 +2,7 @@ import { View, Text, StyleProp, ViewStyle } from 'react-native';
 import React, { FC, PropsWithChildren } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import cn from 'clsx';
+import AdminButton from './AdminButton';
 
 interface ILayout {
   className?: string;
@@ -25,8 +26,9 @@ const Layout: FC<PropsWithChildren<ILayout>> = ({
       >
         {children}
       </View>
+      <AdminButton />
     </SafeAreaView>
-  ); 
+  );
 };
 
 export default Layout;

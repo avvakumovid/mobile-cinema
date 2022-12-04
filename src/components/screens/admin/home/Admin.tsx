@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import { AdminNavigation, Layout } from '@/components/ui';
+import Statistics from './statistics/Statistics';
 
-const Admin = () => {
+const Admin: FC = () => {
   return (
-    <View>
-      <Text>Admin</Text>
-    </View>
+    <Layout isHasPadding>
+      <AdminNavigation title={'Statistics'} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Statistics />
+      </ScrollView>
+    </Layout>
   );
 };
 
 export default Admin;
-
-const styles = StyleSheet.create({});
