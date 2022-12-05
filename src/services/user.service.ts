@@ -3,6 +3,7 @@ import { request } from './api/request.api'
 import { IUser } from '../shared/types/user.interface';
 import { IAuthFormData } from '../shared/types/auth.interface';
 import { IMovie } from '@/shared/types/movie.interface';
+import { IUserEdit } from '@/shared/types/user.interface';
 
 export const UserService = {
     async getAll(searchTerm?: string) {
@@ -47,7 +48,7 @@ export const UserService = {
         })
     },
 
-    async update(_id: string, data: IAuthFormData) {
+    async update(_id: string, data: IUserEdit) {
         return request<string>({
             url: getUserUrl(`${_id}`),
             method: 'PUT',
