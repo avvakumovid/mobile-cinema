@@ -50,7 +50,7 @@ export const MovieService = {
     },
 
     async create() {
-        return request<IMovie>({
+        return request<string>({
             url: getMovieUrl(''),
             method: 'POST',
         })

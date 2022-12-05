@@ -13,7 +13,7 @@ const AdminTable: FC<IAdminTable> = ({
 }) => {
   return (
     <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-      <View className='pb-6'>
+      <ScrollView className='pb-6'>
         <AdminTableHeader headerItems={headerItems} />
 
         {isLoading ? (
@@ -29,7 +29,7 @@ const AdminTable: FC<IAdminTable> = ({
         ) : (
           <Text className='text-white text-lg'>Elements not found</Text>
         )}
-      </View>
+      </ScrollView>
     </ScrollView>
   );
 };
