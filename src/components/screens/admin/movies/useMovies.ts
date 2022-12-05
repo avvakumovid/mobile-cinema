@@ -20,7 +20,7 @@ export const useMovies = () => {
                 editNavigate: () => navigate('MovieEdit', { id: movie._id }),
                 items: [
                     movie.title,
-                    `${movie.genres[0].name}${movie.genres.length > 1 ? '...' : ''}`,
+                    `${movie?.genres[0]?.name}${movie.genres.length > 1 ? '...' : ''}`,
                     String(movie.rating)
                 ]
             }))

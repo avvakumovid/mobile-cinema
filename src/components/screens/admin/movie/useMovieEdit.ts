@@ -11,7 +11,7 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 
     const movieId = params.id
 
-    const { invalidateQueries } = useQueryClient()
+    const queryClient = useQueryClient()
 
     const { isLoading } = useQuery(['get movie', movieId], () => MovieService.getById(movieId), {
         onSuccess(data) {
@@ -28,7 +28,7 @@ export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
                 text2: 'update was successful'
             })
 
-            await invalidateQueries(['search movies'])
+            await queryClient.invalidateQueries(['search movies'])
         }
     })
 

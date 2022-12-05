@@ -11,7 +11,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 
     const actorId = params.id
 
-    const { invalidateQueries } = useQueryClient()
+    const queryClient = useQueryClient()
 
     const { isLoading } = useQuery(['get actor', actorId], () => ActorService.getById(actorId), {
         onSuccess(data) {
@@ -28,7 +28,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
                 text2: 'update was successful'
             })
 
-            await invalidateQueries(['search actors'])
+            await queryClient.invalidateQueries(['search actors'])
         }
     })
 

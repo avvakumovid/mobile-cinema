@@ -12,7 +12,7 @@ const AdminTableItem: FC<IAdminTableItem> = ({ removeHandler, tableItem }) => {
           className={cn('py-3 w-32 mx-2', {
             'justify-end': index === tableItem.items.length - 1,
           })}
-          key={value}
+          key={index}
         >
           <Text className='text-white text-base' numberOfLines={1}>
             {value}

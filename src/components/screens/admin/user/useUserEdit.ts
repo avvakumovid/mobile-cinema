@@ -10,7 +10,7 @@ export const useUserEdit = (setValue: UseFormSetValue<IUserEdit>) => {
 
     const userId = params.id
 
-    const { invalidateQueries } = useQueryClient()
+    const queryClient = useQueryClient()
 
     const { isLoading } = useQuery(['get user', userId], () => UserService.getById(userId), {
         onSuccess(data) {
@@ -28,7 +28,7 @@ export const useUserEdit = (setValue: UseFormSetValue<IUserEdit>) => {
                 text2: 'update was successful'
             })
 
-            await invalidateQueries(['search users'])
+            await queryClient.invalidateQueries(['search users'])
         }
     })
 

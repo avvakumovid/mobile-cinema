@@ -11,7 +11,7 @@ export const useGenreEdit = (setValue: UseFormSetValue<IGenreEditInput>) => {
 
     const genreId = params.id
 
-    const { invalidateQueries } = useQueryClient()
+    const queryClient = useQueryClient()
 
     const { isLoading } = useQuery(['get genre', genreId], () => GenreService.getById(genreId), {
         onSuccess(data) {
@@ -28,7 +28,7 @@ export const useGenreEdit = (setValue: UseFormSetValue<IGenreEditInput>) => {
                 text2: 'update was successful'
             })
 
-            await invalidateQueries(['search genres'])
+            await queryClient.invalidateQueries(['search genres'])
         }
     })
 

@@ -12,7 +12,7 @@ const GenresList = () => {
   return (
     <Layout isHasPadding>
       <AdminNavigation title='Genres' />
-      <AdminHeader control={control} onPress={createAsync}/>
+      <AdminHeader control={control} onPress={createAsync} />
       <AdminTable
         tableItems={data}
         isLoading={isLoading}

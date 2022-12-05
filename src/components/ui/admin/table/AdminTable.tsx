@@ -19,9 +19,9 @@ const AdminTable: FC<IAdminTable> = ({
         {isLoading ? (
           <Loader />
         ) : tableItems?.length ? (
-          tableItems.map(tableItem => (
+          tableItems.map((tableItem, index) => (
             <AdminTableItem
-              key={tableItem._id}
+              key={index}
               removeHandler={() => removeHandler(tableItem._id)}
               tableItem={tableItem}
             />
