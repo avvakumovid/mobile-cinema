@@ -9,7 +9,7 @@ export const navItems: INavItem[] = [
     {
         icon: 'group',
         routeName: 'UsersList',
-        title: 'User'
+        title: 'Users'
     },
     {
         icon: 'movie-filter',

@@ -1,7 +1,8 @@
 import { ScrollView, Text, View } from 'react-native';
 import React, { FC } from 'react';
-import { AdminNavigation, Layout } from '@/components/ui';
+import { Layout } from '@/components/ui';
 import Statistics from './statistics/Statistics';
+import AdminNavigation from '@/components/ui/admin/navigation/AdminNavigation';
 
 const Admin: FC = () => {
   return (
